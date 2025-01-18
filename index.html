@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBRATRACK</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+.card-img-top {
+    height: 200px; /* Adjust as needed */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+    width: 100%;
+}
+
+        .navbar {
+            background-color: #1f1f1f;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: #ffffff !important;
+        }
+
+        .btn-primary {
+            background-color: #6200ea;
+            border-color: #6200ea;
+        }
+
+        .btn-secondary {
+            background-color: #03dac5;
+            border-color: #03dac5;
+        }
+
+        .btn-primary:hover,
+        .btn-secondary:hover {
+            background-color: #3700b3;
+            border-color: #3700b3;
+        }
+
+        .table {
+            color: #ffffff;
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #1e1e1e;
+        }
+
+        .list-group-item {
+            background-color: #1f1f1f;
+            color: #ffffff;
+        }
+
+        .form-control {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            border: 1px solid #6200ea;
+        }
+
+        .form-control:focus {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            border-color: #3700b3;
+            box-shadow: none;
+        }
+        form, 
+    .table {
+        max-width: 600px; /* Adjust width as needed */
+        margin: 0 auto;  /* Center horizontally */}
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">LIBRATRACK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home" data-bs-toggle="popover"
+                            data-bs-content="Go to the homepage" data-bs-trigger="hover">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#books" data-bs-toggle="popover"
+                            data-bs-content="View the list of books" data-bs-trigger="hover">Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#members" data-bs-toggle="popover"
+                            data-bs-content="View library members" data-bs-trigger="hover">Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events" data-bs-toggle="popover"
+                            data-bs-content="See upcoming events" data-bs-trigger="hover">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://www.sitpune.edu.in/contactus" data-bs-toggle="popover" data-bs-content="Contact us"
+                            data-bs-trigger="hover">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://www.sit.ac.in/html/department.php?deptid=19" target="_blank"
+                            data-bs-toggle="popover" data-bs-content="More information" data-bs-trigger="hover">More</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5" id="home">
+        <!-- Dropdown Menu -->
+        <div class="dropdown mb-4">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Manage Library
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#addBook">Add Book</a></li>
+                <li><a class="dropdown-item" href="#books">View Books</a></li>
+                <li><a class="dropdown-item" href="#addMember">Add Member</a></li>
+                <li><a class="dropdown-item" href="#members">View Members</a></li>
+                <li><a class="dropdown-item" href="#events">View Events</a></li>
+            </ul>
+        </div>
+    </div>
+
+<!-- Carousel Section -->
+<div class="container mt-5" id="carousel">
+    <h2 class="mb-4">Library Highlights</h2>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/img1.jpeg"
+                    class="d-block w-100" alt="Bookshelf">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>New Arrivals</h5>
+                    <p>Explore the latest additions to our library.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/img2.jpeg"
+                    class="d-block w-100" alt="Reading Group">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Community Events</h5>
+                    <p>Join our book club and events!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/img3.jpeg"
+                    class="d-block w-100" alt="Children Reading">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Children's Section</h5>
+                    <p>Books and resources for young readers.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<!-- Cards Section -->
+<div class="container mt-5" id="cards">
+    <h2 class="mb-4">Featured Sections</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100 text-dark">
+                <img src="images/img4.jpeg" class="card-img-top" alt="Fiction Books">
+                <div class="card-body">
+                    <h5 class="card-title">Fiction</h5>
+                    <p class="card-text">Dive into imaginative worlds through our fiction collection.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 text-dark">
+                <img src="images/img5.jpeg" class="card-img-top" alt="Non-fiction Books">
+                <div class="card-body">
+                    <h5 class="card-title">Non-Fiction</h5>
+                    <p class="card-text">Learn something new with our non-fiction books.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 text-dark">
+                <img src="images/img6.jpg" class="card-img-top" alt="Biography Books">
+                <div class="card-body">
+                    <h5 class="card-title">Biographies</h5>
+                    <p class="card-text">Read inspiring stories about real people.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Form -->
+        <h2 class="mb-4" style="text-align: center;margin-top: 30px;">Add a New Book</h2>
+        <form>
+            <div class="mb-3">
+                <label for="bookTitle" class="form-label">Book Title</label>
+                <input type="text" class="form-control" id="bookTitle" placeholder="Enter book title">
+            </div>
+            <div class="mb-3">
+                <label for="author" class="form-label">Author</label>
+                <input type="text" class="form-control" id="author" placeholder="Enter author name">
+            </div>
+            <div class="mb-3">
+                <label for="genre" class="form-label">Genre</label>
+                <input type="text" class="form-control" id="genre" placeholder="Enter genre">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <!-- Table -->
+        <h2 class="mt-5 mb-4" id="books" style="text-align: center;">Books List</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col" data-bs-toggle="popover" data-bs-content="Serial number" data-bs-trigger="hover">#
+                    </th>
+                    <th scope="col" data-bs-toggle="popover" data-bs-content="Book title" data-bs-trigger="hover">Title
+                    </th>
+                    <th scope="col" data-bs-toggle="popover" data-bs-content="Author name" data-bs-trigger="hover">
+                        Author</th>
+                    <th scope="col" data-bs-toggle="popover" data-bs-content="Book genre" data-bs-trigger="hover">Genre
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>The Catcher in the Rye</td>
+                    <td>J.D. Salinger</td>
+                    <td>Fiction</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>To Kill a Mockingbird</td>
+                    <td>Harper Lee</td>
+                    <td>Classic</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>1984</td>
+                    <td>George Orwell</td>
+                    <td>Dystopian</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Pride and Prejudice</td>
+                    <td>Jane Austen</td>
+                    <td>Romance</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>The Great Gatsby</td>
+                    <td>F. Scott Fitzgerald</td>
+                    <td>Classic</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Moby Dick</td>
+                    <td>Herman Melville</td>
+                    <td>Adventure</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>War and Peace</td>
+                    <td>Leo Tolstoy</td>
+                    <td>Historical</td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>The Hobbit</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td>Fantasy</td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>The Alchemist</td>
+                    <td>Paulo Coelho</td>
+                    <td>Philosophical</td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>Crime and Punishment</td>
+                    <td>Fyodor Dostoevsky</td>
+                    <td>Psychological</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Members Section -->
+    <div class="container mt-5" id="members">
+        <h2 class="mb-4">Members</h2>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#memberList"
+            aria-expanded="false" aria-controls="memberList">View Members</button>
+        <div class="collapse mt-3" id="memberList">
+            <ul class="list-group">
+                <li class="list-group-item">John Smith - Member since 2020</li>
+                <li class="list-group-item">Jane Doe - Member since 2018</li>
+                <li class="list-group-item">Alice Johnson - Member since 2019</li>
+                <li class="list-group-item">Bob Brown - Member since 2021</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Events Section -->
+    <div class="container mt-5" id="events">
+        <h2 class="mb-4">Upcoming Events</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Book Fair - February 15, 2025</li>
+            <li class="list-group-item">Literature Symposium - March 20, 2025</li>
+            <li class="list-group-item">Poetry Reading - April 10, 2025</li>
+            <li class="list-group-item">Author Meet-and-Greet - May 5, 2025</li>
+        </ul>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container mt-5" id="contact">
+        <h2 class="mb-4" style="text-align: center;">Contact Us</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        // Enable popovers on hover
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+    </script>
+</body>
+
+</html>
